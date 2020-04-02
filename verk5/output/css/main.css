@@ -1,12 +1,27 @@
+/*
+  ========================================
+  Clearfix
+  ========================================
+*/
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+}
 
+.group:after {
+  clear: both;
+}
+
+.group {
+  clear: both;
+  *zoom: 1;
+}
 
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts2/icomoon.eot?jy8ihy');
-  src:  url('fonts2/icomoon.eot?jy8ihy#iefix') format('embedded-opentype'),
-    url('fonts2/icomoon.ttf?jy8ihy') format('truetype'),
-    url('fonts2/icomoon.woff?jy8ihy') format('woff'),
-    url('fonts2/icomoon.svg?jy8ihy#icomoon') format('svg');
+  src: url("fonts2/icomoon.eot?jy8ihy");
+  src: url("fonts2/icomoon.eot?jy8ihy#iefix") format("embedded-opentype"), url("fonts2/icomoon.ttf?jy8ihy") format("truetype"), url("fonts2/icomoon.woff?jy8ihy") format("woff"), url("fonts2/icomoon.svg?jy8ihy#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -21,7 +36,6 @@
   font-variant: normal;
   text-transform: none;
   line-height: 1;
-
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -30,15 +44,19 @@
 .icon-facebook2:before {
   content: "\ea91";
 }
+
 .icon-instagram:before {
   content: "\ea92";
 }
+
 .icon-twitter:before {
   content: "\ea96";
 }
+
 .icon-youtube:before {
   content: "\ea9d";
 }
+
 @font-face {
   font-family: 'icomoon';
   src: url("fonts/icomoon.eot?bx3ctr");
@@ -65,7 +83,6 @@
 .icon-glass:before {
   content: "\f000";
 }
-
 
 .icon-arrow-up-right2:before {
   content: "\ea3b";
@@ -151,11 +168,123 @@ body {
   background-image: -webkit-gradient(linear, left top, left bottom, from(antiquewhite), to(#f1a74c));
   background-image: linear-gradient(antiquewhite, #f1a74c);
   padding: 1em;
+  /*
+.ta{
+  display: inline-block;
+  float: right;
+ 
+}
+*/
 }
 
 body .cli_1 {
   width: 600px;
   height: 600px;
+}
+
+body .de {
+  width: 320px;
+  height: 320px;
+  padding: 10px;
+  border: 5px solid gray;
+  margin: 0;
+  background-color: antiquewhite;
+  /*  position: relative; */
+  -webkit-animation-name: example;
+          animation-name: example;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-iteration-count: 2;
+          animation-iteration-count: 2;
+  animation-direction: alternate-reverse;
+  text-align: center;
+  overflow: hidden;
+}
+
+body .href {
+  -webkit-animation-name: example;
+          animation-name: example;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+  position: relative;
+  left: -130px;
+  /* top: 190px; */
+}
+
+body .hre {
+  -webkit-animation-name: example;
+          animation-name: example;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: 3s;
+          animation-iteration-count: 3s;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+  position: relative;
+  text-align: center;
+  /* top: 210px; */
+  right: 5px;
+  /* display: inline-block; */
+  cursor: pointer;
+  padding: 5px 10px 5px 10px;
+  background: silver;
+}
+
+body .my {
+  width: 100%;
+  height: 70%;
+  /* top: 500px; */
+  margin: 0px;
+  /* padding: 0px 0px 100px; */
+  top: 10px;
+  -webkit-animation-name: myndlag;
+          animation-name: myndlag;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+}
+
+@-webkit-keyframes myndlag {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes myndlag {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes example {
+  from {
+    left: -130px;
+  }
+  to {
+    left: 430px;
+  }
+}
+
+@keyframes example {
+  from {
+    left: -130px;
+  }
+  to {
+    left: 430px;
+  }
 }
 
 body .fon {
@@ -186,7 +315,7 @@ body .smedia {
 body .smediaButton {
   width: 40px;
   height: 40px;
-  border-radius: 50%;
+  border-radius: 0%;
   margin: 5px 0 9px 0;
 }
 
@@ -197,6 +326,13 @@ body .imge img {
 
 body .cla {
   text-decoration: none;
+}
+
+.wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 5fr 2fr;
+      grid-template-columns: 5fr 2fr;
 }
 
 @media screen and (min-width: 800px) {
