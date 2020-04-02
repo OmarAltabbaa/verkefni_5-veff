@@ -234,9 +234,13 @@ body .hre {
   background: silver;
 }
 
-body .hre .my {
-  width: 50px;
-  height: 30px;
+body .my {
+  width: 320px;
+  height: 100px;
+  top: 150px;
+  margin: 0px;
+  padding: 0px 0px 100px;
+  top: 10px;
 }
 
 @-webkit-keyframes example {

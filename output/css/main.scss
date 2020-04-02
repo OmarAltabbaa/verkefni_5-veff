@@ -161,11 +161,14 @@
   cursor: pointer;
   padding: 5px 10px 5px 10px;
   background:silver ;
- 
-.my{
-  width: 50px;
-  height: 30px;
 }
+.my{
+  width: 320px;
+  height: 100px;
+  top: 150px;
+  margin: 0px;
+  padding: 0px 0px 100px;
+  top: 10px;
 }
 @keyframes example {
  from{ left: -130px;}
